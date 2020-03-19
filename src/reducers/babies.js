@@ -12,7 +12,7 @@ const order = (state = [], action) => {
     }
 };
 
-const byId = (state = [], action ) => {
+const byId = (state = {}, action ) => {
     switch(action.type) {
         case types.BABY_ADDED: {
             return {
@@ -30,6 +30,9 @@ const selectBaby = (state = [], action) => {
     switch(action.type) {
         case types.BABY_SELECTED: {
             return action.payload;
+        }
+        case types.BABY_ADDED: {
+            return action.payload.id;
         }
         default: {
             return state;
