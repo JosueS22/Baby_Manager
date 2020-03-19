@@ -4,8 +4,8 @@ import {Router, Switch, Route} from 'react-router';
 import {createBrowserHistory} from 'history'
 
 import { configureStore } from '../../store';
-import AddEventToBaby from '../AddEventToBaby';
-import AddBabyForm from '../AddBabyForm';
+import AddEvent from '../AddEvent';
+import AddBaby from '../AddBaby';
 import BabiesWithEvents from '../BabiesWithEvents'
 import './styles.css'
 
@@ -19,11 +19,11 @@ const App = () => (
                 <Route path ='/babies'>
                 <div className='app-container'>
                     <BabiesWithEvents/>
-                    <AddEventToBaby/>
+                    <AddEvent/>
                 </div>
                 </Route>
                 <Route path = '/'>
-                <AddBabyForm/>
+                <AddBaby/>
                 </Route>
             </Switch>
         </Router>

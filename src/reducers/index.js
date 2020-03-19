@@ -21,6 +21,8 @@ export const getBabies = (
     state,
 ) => babiesSelectors.getBabies(state.babies);
 
+export const getSelectedBaby = state => babiesSelectors.getSelectedBaby(state.babies);
+
 export const getEvent = (
     state,
     index,
