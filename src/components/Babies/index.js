@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 import './styles.css'
 import * as selectors from '../../reducers';
-import * as actions from '../../actions/Babies';
+import * as actions from '../../actions/babies';
 import Baby from '../Baby';
 
 const Babies = ({ babies }) => (

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import './styles.css'
 import * as selectors from '../../reducers';
-import Event from '../event';
+import Event from '../Event';
 
 const Events = ({ events }) => (
     <div className="event-conteiner">

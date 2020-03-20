@@ -4,15 +4,20 @@ import { combineReducers } from 'redux';
 const byId = (state ={}, action) => {
     switch (action.types) {
         case types.EVENT_ADDED: {
-            return {
-                ...state,
-                [action.payload.id]: action.payload
-            };
+            if (state[action.payload.idBaby] !== undefined){
+                return {
+                    ...state,
+                    [action.payload.id]: action.payload
+                };
+            }
         }
         case types.EVENT_DELETED: {
             const newState = state
             delete newState[action.payload]
             return newState;
+        }
+        default: {
+            return state;
         }
     }
 };

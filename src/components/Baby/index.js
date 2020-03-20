@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 
 import './styles.css';
 import * as selectors from '../../reducers';
-import * as actions from '../../actions/babies';
+import * as selectedActions from '../../actions/selectedBaby';
 
 const Baby = ({
+    baby,
     name,
     lastName,
     isSelected = false,
@@ -24,3 +25,18 @@ const Baby = ({
     </div>
 );
 
+export default connect(
+  (state, { index }) => ({
+    baby: index,
+    isSelected: selectors.getSelectedBaby(state) === index,
+    id: Object.entries(Object.entries(index)[0][1])[0][1],
+    name: Object.entries(Object.entries(index)[0][1]),
+    lastName: Object.entries(Object.entries(index)[0][1])[2][1],
+  }),
+  (dispatch, { index }) => ({
+    onClick() {
+      dispatch(selectedActions.selectedBaby(index));
+      console.log(selectedActions.selectedBaby(index));
+    },
+  }),
+)(Baby);
