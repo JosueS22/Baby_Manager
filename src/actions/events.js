@@ -1,12 +1,14 @@
 import * as types from '../types/events';
 
-export const addEvent = (id, tipo, info, date) => ({
+export const addEvent = (id, tipo, dateTime, info, babyId, babyName) => ({
     types: types.EVENT_ADDED,
     payload: {
         id,
         tipo,
+        dateTime,
         info,
-        date,
+        babyId,
+        babyName,
     },
 });
 

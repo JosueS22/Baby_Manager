@@ -1,17 +1,17 @@
 import * as types from '../types/eventsForBaby';
 
-export const addEventToBaby = (idBaby, idEvent) => ({
-    type: types.EVENT_ADDED_TO_BABY,
+export const addEventToBaby = (agent, eventId) => ({
+    type: types.BABY_EVENT_ADDED,
     payload: {
-        idBaby,
-        idEvent,
+        baby: agent,
+        eventId,
     },
 });
 
-export const removeEventFromBaby = (idBaby, idEvent) => ({
-    type: types.EVENT_REMOVED_FROM_BABY,
+export const removeEventFromBaby = (agent, eventId) => ({
+    type: types.BABY_EVENT_REMOVED,
     payload: {
-        idBaby,
-        idEvent,
+        baby: agent,
+        eventId,
     }
 });

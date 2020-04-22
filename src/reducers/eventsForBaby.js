@@ -1,18 +1,17 @@
-import { pull } from 'lodash';
 import * as types from '../types/eventsForBaby';
 
-const eventsForBaby = (state = {}, action) => {
-    switch (action.types) {
-        case types.EVENT_ADDED_TO_BABY: {
+const byId = (state = {}, action) => {
+    switch (action.type) {
+        case types.BABY_EVENT_ADDED: {
             return {
                 ...state,
-                [action.payload.idBaby]: [...state[action.payload.idBaby], action.payload.idEvent]
+                [action.payload.baby]: [...action.payload.idEvent],
             };
         }
-        case types.EVENT_REMOVED_FROM_BABY: {
+        case types.BABY_EVENT_REMOVED: {
             return {
                 ...state,
-                [action.payload.idBaby]: [pull(...state[action.payload.idBaby], [action.payload.idEvent])]
+                [action.payload.baby]: [...state.payload.baby].filter(b => b !== action.payload.idEvent),
             };
         }
         default: {
@@ -21,6 +20,9 @@ const eventsForBaby = (state = {}, action) => {
     }  
 };
 
-export default eventsForBaby;
+export default byId;
 
-export const getBabyEvents = (state, idBaby) => state[idBaby];
+export const getAddedEvents = state => state.order.map(
+    babyId => getAddedEvent(state, babyId),
+).filter(babyId => babyId != null);
+export const getAddedEvent = (state, babyId) => state[babyId];
