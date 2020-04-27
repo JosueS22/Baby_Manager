@@ -50,11 +50,11 @@ export default connect(
     babyId: Object.entries(selectors.getSelectedBaby(state))[0][1],
     babyName: Object.entries(selectors.getSelectedBaby(state))[0][1],
     types: [
-      [0, 'Cambio de pamper por popo'],
-      [1, 'Cambio de pamper por pipi'],
-      [2, 'Tomo pecho'],
-      [3, 'Tomo pacha'],
-      [4, 'Tomo una siesta'],
+      [0, 'Popo'],
+      [1, 'Pipi'],
+      [2, 'Pecho'],
+      [3, 'Pacha'],
+      [4, 'Siesta'],
       [5, 'Otro']
     ],
   }),

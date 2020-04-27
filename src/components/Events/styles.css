@@ -5,14 +5,15 @@
   background-color: cornflowerblue;
   position: absolute;
   width: 77%;
+  height: 48%;
   right: 15px;
-  bottom: 360px;
+  bottom: 10px;
   align-self: center;
   text-align: center;
-  align-items: center;
-  justify-content: center;
+  justify-content: left;
   overflow: scroll;
   max-height: 460px;
+  margin: 1px;
 }
 
 .events h1 {
