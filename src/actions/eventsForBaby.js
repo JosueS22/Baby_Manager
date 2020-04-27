@@ -1,9 +1,9 @@
 import * as types from '../types/eventsForBaby';
 
-export const addEventToBaby = (agent, eventId) => ({
+export const addEventToBaby = (baby, eventId) => ({
     type: types.BABY_EVENT_ADDED,
     payload: {
-        baby: agent,
+        baby: baby,
         eventId,
     },
 });

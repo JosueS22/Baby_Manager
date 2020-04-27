@@ -1,7 +1,6 @@
-import * as types from '../types/events';
 import omit from 'lodash/omit';
-import pull from 'lodash/pull';
 import { combineReducers } from 'redux';
+import * as types from '../types/events';
 
 const byId = (state ={}, action) => {
     switch (action.type) {
@@ -20,7 +19,7 @@ const byId = (state ={}, action) => {
     }
 };
 
-const order = (state = [], action) => {
+const byOrder = (state = [], action) => {
     switch (action.type) {
         case types.EVENT_ADDED: {
             return [...state, action.payload.id]
@@ -36,13 +35,13 @@ const order = (state = [], action) => {
 
 const events = combineReducers ({
     byId,
-    order,
+    byOrder,
 });
 
 export default events;
 
-export const getEvent = (state, id) => state[id];
+export const getEvent = (state, id) => state.byId[id];
 
-export const getEvents = (state) => state.order.map(
+export const getEvents = (state) => state.byOrder.map(
     id => getEvent(state, id)
 ).filter(event => event != null);

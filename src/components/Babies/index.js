@@ -1,43 +1,37 @@
-import {size} from 'lodash'
 import React from 'react';
-import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
 
-import './styles.css'
+import './styles.css';
 import * as selectors from '../../reducers';
-import * as actions from '../../actions/babies';
 import Baby from '../Baby';
 
-const Babies = ({ babies }) => (
-    <div className="babies-container">
+
+const Babies = ({ babyList }) => (
+  <div className="t-wrapper">
+    <div className="babies">
       {
-        size(babies) === 0 ? (
+        babyList.length === 0 ? (
           <h1>
-            {'No hay bebes :('}
+            {'No hay bebes'}
           </h1>
         ) : (
-          babies.map(
-            id => (
+          (babyList).map(
+            index => (
               <Baby
-                key={id}
-                id = {id}
+                key={index}
+                index={index}
               />
             ),
           )
         )
       }
-
-      <Link to = '/'>
-        <button>
-          {'Nuevo Bebe'}
-        </button>
-      </Link>
     </div>
-    
-  );
+  </div>
+);
+
 
 export default connect(
-    state => ({
-        babies: selectors.getBabies(state),
-    }),
+  state => ({
+    babyList: selectors.getBabies(state),
+  }),
 )(Babies);

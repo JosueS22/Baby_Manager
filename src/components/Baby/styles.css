@@ -1,1 +1,32 @@
+.baby-wrapper {
+    display: flex;
+    flex-direction: row;
+    max-height: 120px;
+    transition: 0.25s;
+    margin: 10px;
+}
 
+.baby {
+    background-color: lightgreen;
+    float: left;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 67px;
+    width: 240px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    font-style: normal;
+}
+
+.baby--selected {
+    transform: scale(0.9);
+}
+
+.baby_name{
+    font-size: 25px;
+}
+.baby_last_name{
+    font-size: 22px;
+}

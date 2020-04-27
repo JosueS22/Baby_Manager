@@ -35,3 +35,12 @@ export const getAddedEvents = (
     state.eventsForBabies
 );
 
+export const getEvent = (
+    state,
+    id,
+) => eventsSelectors.getEvent(state.events, id);
+export const getEvents = (
+    state,
+) => eventsSelectors.getEvents(state.events);
+
+

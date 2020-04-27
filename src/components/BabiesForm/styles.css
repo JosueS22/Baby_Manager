@@ -1,0 +1,80 @@
+.baby-form-wrapper{
+  background-color: darkblue;
+  width: 20%;
+  height: 48%;
+  position: fixed;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.baby-form-wrapper h1 {
+  font-family: "Great Vibes", cursive; 
+  font-size: 60px; 
+  line-height: 100px; 
+  font-weight: bold; 
+  margin-bottom: 0px; 
+  margin-top: 40px; 
+  text-align: center; 
+  text-shadow: 0 1px 1px cyan;
+  color: white;
+}
+
+.FormBaby {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+  
+.FormField {
+  margin-bottom: 40px;
+}
+
+.FormField_Label {
+  display: block;
+  font-size: 2em;
+  color: black;
+  font-size: 1em;
+}
+  
+.FormTitle {
+  color: black;
+  font-weight: 300;
+  margin-bottom: 50px;
+}  
+  
+  
+.FormField_Input {
+  width: 85%;
+  background-color: transparent;
+  border: none;
+  color: black;
+  outline: none;
+  border-bottom: 1px solid black;
+  font-size: 1em;
+  font-weight: 300;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+  
+.FormField_Input::placeholder {
+  color: black;
+}
+  
+.SubmitButton{
+  align-items: center;
+  color: purple;
+  background-color: black;
+  font-weight: 100;
+  height: 100;
+  size: 50;
+}
+  
+  
+
+  

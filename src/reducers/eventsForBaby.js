@@ -5,13 +5,13 @@ const byId = (state = {}, action) => {
         case types.BABY_EVENT_ADDED: {
             return {
                 ...state,
-                [action.payload.baby]: [...action.payload.idEvent],
+                [action.payload.baby]: [...action.payload.event],
             };
         }
         case types.BABY_EVENT_REMOVED: {
             return {
                 ...state,
-                [action.payload.baby]: [...state.payload.baby].filter(b => b !== action.payload.idEvent),
+                [action.payload.baby]: [...state.payload.baby].filter(b => b !== action.payload.event),
             };
         }
         default: {
@@ -22,7 +22,7 @@ const byId = (state = {}, action) => {
 
 export default byId;
 
+export const getAddedEvent = (state, babyId) => state[babyId];
 export const getAddedEvents = state => state.order.map(
     babyId => getAddedEvent(state, babyId),
 ).filter(babyId => babyId != null);
-export const getAddedEvent = (state, babyId) => state[babyId];
