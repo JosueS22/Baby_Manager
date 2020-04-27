@@ -14,10 +14,10 @@ const EventsForm = ({ onSubmit, babyId, babyName, types }) => {
   const [value2, changeValue2] = useState('');
   return (
     <div className='event-form-wrapper'>
-      <h2> {'Agregar evento'}</h2>
+      <h1> {'Agregar evento'}</h1>
       <div className='FormBaby'>
         <label className='FormField_Label' htmlFor='name'>
-          Tipo
+          <h2>Tipo</h2>
         </label>
         <select onChange= {e => changeValue1(e.target.value)}
         value={value1} className='selectorTipo'>
@@ -31,7 +31,7 @@ const EventsForm = ({ onSubmit, babyId, babyName, types }) => {
         </select>
         <div className='FormField'>
           <label className='FormField_Label' htmlFor='name'>
-            Nota
+            <h2>Nota</h2>
           </label>
           <input type='text' className='FormField_Input' placeholder='Ingrese obervaciones' 
           value={value2} onChange={e => changeValue2(e.target.value)}/>

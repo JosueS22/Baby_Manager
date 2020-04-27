@@ -16,11 +16,15 @@ const BabiesForm = ({ onSubmit }) => {
       </h1>
       <div className="FormBaby">
         <div className = "FormField">
-          <label className="FormField_Label" htmlFor="name">NOMBRE</label>
-          <input type="text" className="FormField_Input" placeholder="Ingresa el nombre" value={babyName} onChange={e => changeBabyName(e.target.value)}/>
+          <label className="FormField_Label" htmlFor="name">
+            <h2>Nombre</h2>
+          </label>
+          <input type="text" className="FormField_Input" placeholder="Nombre" value={babyName} onChange={e => changeBabyName(e.target.value)}/>
         </div>
         <div className = "FormField"> 
-          <label className="FormField_Label" htmlFor="name">APELLIDO</label>
+          <label className="FormField_Label" htmlFor="name">
+            <h2>Apellido</h2>
+          </label>
           <input type="text" className="FormField_Input" placeholder="Apellido" value={babyLastName} onChange={e => changeBabyLastName(e.target.value)}/>
         </div>
         <button className="SubmitButton" type="submit" onClick={

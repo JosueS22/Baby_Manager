@@ -41,6 +41,11 @@
   color: black;
   font-size: 1em;
 }
+
+.FormField_Label h2 {
+  color: cyan;
+  font-family: sans-serif;
+}
   
 .FormTitle {
   color: black;
@@ -63,7 +68,7 @@
 }
   
 .FormField_Input::placeholder {
-  color: black;
+  color: whitesmoke;
 }
   
 .SubmitButton{

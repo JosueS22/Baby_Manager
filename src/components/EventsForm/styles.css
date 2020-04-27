@@ -20,6 +20,11 @@
   font-size: 1em;
 }
 
+.FormBaby h2 {
+  color: cyan;
+  font-family: sans-serif;
+}
+
 .FormField_Input {
   background-color: transparent;
   border: none;
@@ -44,7 +49,7 @@
 .SubmitButton{
   align-items: center;
   color:black;
-  background-color: #F75A87;
+  background-color: darkseagreen;
   font-weight: 100;
   height: 100;
   size: 50;
@@ -66,7 +71,7 @@
   border-radius: 20px;
 }
   
-.event-form-wrapper h2 {
+.event-form-wrapper h1 {
   font-family: "Great Vibes", cursive; 
   font-size: 60px; 
   line-height: 100px; 
